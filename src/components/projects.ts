@@ -16,6 +16,7 @@ export const projects = [
       { title: "Document Management", description: "Developed a document management system with upload, download, and search functionalities." },
     ],
     role: "Lead Developer",
+    complete: true,
 
   },
   {
@@ -31,6 +32,7 @@ export const projects = [
       { title: "Document Management", description: "Developed a document management system with upload, download, and search functionalities." },
     ],
     role: "Lead Developer",
+    complete: false,
   },
   {
     title: "Lesion Detection",
@@ -48,6 +50,7 @@ export const projects = [
     sourceUrl: "",
     sourceLabel: "View Source",
     role: "Lead Developer",
+    complete: false,
   },
   {
     title: "Rare Disease Detection",
@@ -62,6 +65,7 @@ export const projects = [
       { title: "Document Management", description: "Developed a document management system with upload, download, and search functionalities." },
     ],
     role: "Lead Developer",
+    complete: false,
   },
   {
     title: "MedQA DPO",
@@ -76,5 +80,6 @@ export const projects = [
       { title: "Document Management", description: "Developed a document management system with upload, download, and search functionalities." },
     ],
     role: "Lead Developer",
+    complete: false,
   }
 ];

@@ -44,7 +44,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Link
               key={project.title}
-              to={project.path}
+              to={project.complete ? project.path : "/work-in-progress"}
               className="
                 group
                 relative

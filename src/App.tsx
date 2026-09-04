@@ -13,6 +13,7 @@ import Projects from './pages/Projects'
 
 import {projects} from "./components/projects"
 import Project from './pages/Project'
+import WorkInProgress from './pages/WIP'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
               />
             } />
           ))}
+          <Route path="/work-in-progress" element={<WorkInProgress />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
