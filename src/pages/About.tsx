@@ -1,6 +1,4 @@
 import AboutHeader from "../components/AboutHeader";
-import NavBar from "../components/NavBar";
-import HorizontalBar from "../components/HorizontalBar";
 import TopCornerMenu from "../components/TopLeftMenu";
 
 export default function About() {

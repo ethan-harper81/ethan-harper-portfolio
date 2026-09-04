@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import TopCornerMenu from "../components/TopLeftMenu";
 
 export default function WorkInProgress() {

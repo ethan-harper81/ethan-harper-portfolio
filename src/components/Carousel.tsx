@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function Carousel({ images, interval = 3000 }:
 {
@@ -16,9 +16,6 @@ export default function Carousel({ images, interval = 3000 }:
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
 
   useEffect(() => {
     const timer = setInterval(nextSlide, interval);
