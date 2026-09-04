@@ -11,8 +11,17 @@ export default function ProjectPage({
   sourceLabel = "View Source",
   year,
   role,
-},{
-
+}:{
+    title: string,
+    subtitle?: string,
+    tech?: string[],
+    problem: string,
+    highlights?: { title?: string, description: string }[],
+    images?: { src: string, alt?: string, caption?: string }[],
+    sourceUrl?: string,
+    sourceLabel?: string,
+    year?: string,
+    role?: string,
 }) {
   return (
     <main className="min-h-screen bg-[#7e2a0c] px-6 py-12 text-[#fffbeb] md:px-12">

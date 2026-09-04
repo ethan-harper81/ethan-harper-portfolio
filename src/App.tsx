@@ -11,6 +11,9 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
 
+import {projects} from "./components/projects"
+import Project from './pages/Project'
+
 function App() {
 
 
@@ -18,6 +21,22 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          {projects.map((project, index) => (
+            <Route key={index} path={project.path} element={
+              <Project 
+                title={project.title}
+                subtitle={project.subtitle}
+                year={project.year}
+                role={project.role}
+                tech={project.tech}
+                problem={project.problem}
+                highlights={project.highlights}
+                images={project.images}
+                sourceUrl={project.sourceUrl}
+                sourceLabel={project.sourceLabel}
+              />
+            } />
+          ))}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
