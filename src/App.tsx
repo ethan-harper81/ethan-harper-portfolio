@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/ethan-harper-portfolio">
         <Routes>
           {projects.map((project, index) => (
             <Route key={index} path={project.path} element={
