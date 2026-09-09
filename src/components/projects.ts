@@ -16,6 +16,8 @@ export const projects = [
       { title: "Document Management", description: "Developed a document management system with upload, download, and search functionalities." },
     ],
     role: "Lead Developer",
+    sourceLabel: "",
+    sourceUrl: "",
     complete: true,
 
   },
@@ -32,6 +34,8 @@ export const projects = [
       { title: "Document Management", description: "Developed a document management system with upload, download, and search functionalities." },
     ],
     role: "Lead Developer",
+    sourceLabel: "",
+    sourceUrl: "",
     complete: false,
   },
   {
@@ -53,6 +57,8 @@ export const projects = [
     ],
     images: [],
     role: "Lead Developer",
+    sourceLabel: "",
+    sourceUrl: "",
     complete: true,
   },
   {
@@ -68,6 +74,8 @@ export const projects = [
       { title: "Document Management", description: "Developed a document management system with upload, download, and search functionalities." },
     ],
     role: "Lead Developer",
+    sourceLabel: "",
+    sourceUrl: "",
     complete: false,
   },
   {
@@ -83,6 +91,8 @@ export const projects = [
       { title: "Document Management", description: "Developed a document management system with upload, download, and search functionalities." },
     ],
     role: "Lead Developer",
+    sourceLabel: "",
+    sourceUrl: "",
     complete: false,
   }
 ];
