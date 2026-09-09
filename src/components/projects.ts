@@ -7,7 +7,7 @@ export const projects = [
     subtitle: "A web application for viewing DICOM Total Body Photography studies.",
     tech: ["React", "TypeScript", "Python", "FastAPI", "PostgreSQL", "Orthanc"],
     problem: 
-        "The Total Body Photography (TBP) scans that we capture consist of over 30GB of High-Resolution images of the body." 
+        "The Total Body Photography (TBP) scans that the Lumo Imaging's LumoScanner captures consist of over 30GB of High-Resolution images of the body." 
         + "These images are stored in the DICOM format, which is a standard for medical imaging." 
         + "However, traversing and viewing these images can be cumbersome and inefficient." 
         + "LumoDoc aims to streamline this process by providing a user-friendly platform for healthcare professionals to view and analyze these images, saving patients time and allowing doctors to triage malignant lesions more easily.",
@@ -66,17 +66,42 @@ export const projects = [
     category: "Graduate Research",
     year: "2025",
     path: "/projects/project-four",
-    subtitle: "A web application for managing and tracking medical documents.",
-    tech: ["React", "TypeScript", "Node.js", "Express", "MongoDB"],
-    problem: "Managing and tracking medical documents can be cumbersome and inefficient. LumoDoc aims to streamline this process by providing a user-friendly platform for healthcare professionals.",
+    subtitle: "Few-shot and semi-supervised learning for rare neurological disease detection from MRI scans",
+    tech: ["Python","PyTorch","Torchvision","DenseNet-121","NumPy","scikit-learn"],
+    problem: "Developed a medical imaging classification system for detecting rare neurological diseases when only a handful of labeled MRI scans are available. Conventional deep learning methods depend on large, balanced datasets, making them poorly suited to rare conditions where expert annotations are costly and positive cases are severely underrepresented."
+      + "\n"
+      + "The system combines domain-specific DenseNet-121 pretraining, prototypical few-shot classification, and confidence-based pseudo-labeling to adapt to a previously unseen disease using five labeled examples while learning from additional unlabeled scans.",
+
     highlights: [
-      { title: "User Authentication", description: "Implemented secure user authentication using JWT and bcrypt." },
-      { title: "Document Management", description: "Developed a document management system with upload, download, and search functionalities." },
+      {
+        title: "Hybrid Few-Shot and Semi-Supervised Learning",
+        description: "Designed a two-stage framework that combines prototypical few-shot learning with semi-supervised fine-tuning, allowing the model to learn from scarce annotations while extracting additional value from a larger pool of unlabeled MRI scans."
+      },
+      {
+        title: "Domain-Specific DenseNet Pretraining",
+        description: "Pretrained a DenseNet-121 model as an 18-class classifier on neurological conditions excluding the target disease. Reused the learned feature extractor to provide medically relevant image representations for downstream detection of an unseen condition."
+      },
+      {
+        title: "Five-Shot Disease Adaptation",
+        description: "Implemented a prototypical network that represents positive and negative classes using the mean embeddings of their support examples. Query scans are classified according to their distance from these prototypes, enabling adaptation to Walker-Warburg Syndrome from only five labeled positive cases."
+      },
+      {
+        title: "Confidence-Based Pseudo-Labeling",
+        description: "Applied the prototypical network to unlabeled scans and selected positive predictions with at least 90% confidence. These pseudo-labeled cases were added to the supervised training set to increase representation of the rare target class while limiting label noise."
+      },
+      {
+        title: "Medical Image Preprocessing Pipeline",
+        description: "Built a standardized MRI preprocessing workflow with 224×224 resizing, Otsu-based background removal, Gaussian denoising, and channel-wise z-score normalization to reduce irrelevant variation and produce consistent model inputs."
+      },
+      {
+        title: "11-Point Recall Improvement",
+        description: "Improved recall from 0.77 to 0.88 over the limited-data supervised baseline while increasing F1 score from 0.82 to 0.85. The gain demonstrates greater sensitivity to rare positive cases, where reducing false negatives is especially important."
+      },
     ],
-    role: "Lead Developer",
-    sourceLabel: "",
-    sourceUrl: "",
-    complete: false,
+    role: "Contributing Researcher",
+    sourceLabel: "Github Link",
+    sourceUrl: "https://github.com/ethan-harper81/Leveraging-FSL-in-Rare-Disease-Detection",
+    complete: true,
   },
   {
     title: "MedQA DPO",

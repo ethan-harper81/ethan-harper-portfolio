@@ -89,7 +89,31 @@ export default function ProjectPage({
               </div>
             )}
           </div>
+          {sourceUrl && (
+          <section className="pt-10">
+            <a
+              href={sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="
+                inline-flex items-center gap-3
+                rounded-full
+                border-2 border-[#fffbeb]
+                px-6 py-3
+                text-sm uppercase tracking-[0.2em]
+                transition-colors duration-300
+                hover:bg-[#fffbeb]
+                hover:text-[#7e2a0c]
+              "
+            >
+              {sourceLabel}
+              <span>↗</span>
+            </a>
+          </section>
+        )}
         </header>
+
+        
 
         {/* Problem */}
         <section className="grid gap-6 border-b border-[#fffbeb]/40 py-12 md:grid-cols-[220px_1fr]">
@@ -159,30 +183,7 @@ export default function ProjectPage({
             </div>
           </section>
         )}
-
-        {/* Optional source */}
-        {sourceUrl && (
-          <section className="py-12">
-            <a
-              href={sourceUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="
-                inline-flex items-center gap-3
-                rounded-full
-                border-2 border-[#fffbeb]
-                px-6 py-3
-                text-sm uppercase tracking-[0.2em]
-                transition-colors duration-300
-                hover:bg-[#fffbeb]
-                hover:text-[#7e2a0c]
-              "
-            >
-              {sourceLabel}
-              <span>↗</span>
-            </a>
-          </section>
-        )}
+        
       </div>
     </main>
   );
