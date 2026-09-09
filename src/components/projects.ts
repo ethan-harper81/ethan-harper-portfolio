@@ -5,15 +5,69 @@ export const projects = [
     year: "2026",
     path: "/projects/project-one",
     subtitle: "A web application for viewing DICOM Total Body Photography studies.",
-    tech: ["React", "TypeScript", "Python", "FastAPI", "PostgreSQL", "Orthanc"],
+    tech: ["React", "TypeScript", "Cornerstone.js", "Python", "FastAPI", "PostgreSQL", "Orthanc"],
     problem: 
         "The Total Body Photography (TBP) scans that the Lumo Imaging's LumoScanner captures consist of over 30GB of High-Resolution images of the body." 
-        + "These images are stored in the DICOM format, which is a standard for medical imaging." 
+        + " These images are stored in the DICOM format, which is a standard for medical imaging." 
         + "However, traversing and viewing these images can be cumbersome and inefficient." 
         + "LumoDoc aims to streamline this process by providing a user-friendly platform for healthcare professionals to view and analyze these images, saving patients time and allowing doctors to triage malignant lesions more easily.",
     highlights: [
-      { title: "User Authentication", description: "Implemented secure user authentication using keycloak." },
-      { title: "Document Management", description: "Developed a document management system with upload, download, and search functionalities." },
+      {
+        title: "Purpose-Built Medical Imaging Viewer",
+        description: "Designed and developed a specialized medical imaging experience on top of the OHIF framework, transforming a general-purpose DICOM viewer into a focused workflow for reviewing whole-body imaging studies and skin lesions."
+      },
+      {
+        title: "Longitudinal Study Comparison",
+        description: "Built a multi-study workflow that allows clinicians to compare current and historical exams, match corresponding lesions across studies, and review changes in clinically relevant characteristics over time."
+      },
+      {
+        title: "Intelligent Lesion Analysis",
+        description: "Created a lesion-focused analysis interface that surfaces outliers based on asymmetry, border, color, and diameter measurements, with adjustable sensitivity controls for refining which findings require closer review."
+      },
+      {
+        title: "Interactive Lesion Review Workflow",
+        description: "Implemented an end-to-end workflow for displaying, selecting, inspecting, dismissing, and restoring detected lesions while keeping visual annotations, application state, and backend records synchronized."
+      },
+      {
+        title: "High-Resolution On-Demand Imaging",
+        description: "Developed a workflow that transitions from overview imagery to high-resolution lesion images on demand, providing detailed diagnostic context without loading every large image upfront."
+      },
+      {
+        title: "Browser Performance and Memory Optimization",
+        description: "Improved performance for large medical imaging datasets by moving DICOM metadata processing into a web worker, managing high-resolution image lifecycles, and addressing cache growth and memory leaks."
+      },
+      {
+        title: "DICOM-Driven Adaptive Layouts",
+        description: "Built a layout engine that interprets structured DICOM presentation metadata to reconstruct scanner-defined image positioning, ordering, body sides, and pose groupings instead of relying on hard-coded arrangements."
+      },
+      {
+        title: "Specialized Thumbnail Navigation",
+        description: "Created a responsive thumbnail browser and carousel for large, structured image sets, supporting rapid navigation between body positions, synchronized viewport selection, smooth scrolling, and touch interactions."
+      },
+      {
+        title: "Custom Medical Imaging Annotations",
+        description: "Extended the Cornerstone annotation system with specialized lesion bounding boxes and dynamic coloring that communicates lesion state, statistical significance, and longitudinal change directly in the viewport."
+      },
+      {
+        title: "Clinical Feature Visualization",
+        description: "Designed lesion detail views that clearly present computed characteristics, derived scores, comparison values, and percentage changes in a concise clinical interface."
+      },
+      {
+        title: "Multi-Viewport Synchronization",
+        description: "Implemented coordinated viewport behavior for side-by-side and overlaid study review, including synchronized image selection, camera presentation, window and level settings, and lesion annotations."
+      },
+      {
+        title: "Backend Integration Architecture",
+        description: "Developed a typed client and service layer connecting the viewer to APIs for lesion annotations, computed features, correspondence data, high-resolution images, system preferences, and lesion-state updates."
+      },
+      {
+        title: "Configurable Clinical Experience",
+        description: "Added server-managed preferences for annotation colors, outlier thresholds, and feature selection, allowing the application's behavior to be adjusted without rebuilding the frontend."
+      },
+      {
+        title: "Responsive and Touch-Friendly UX",
+        description: "Adapted the application for desktop, ultrawide, and touch-screen environments through dynamic panel sizing, swipe navigation, contextual controls, and input-aware hover behavior."
+      },
     ],
     role: "Lead Developer",
     sourceLabel: "",
